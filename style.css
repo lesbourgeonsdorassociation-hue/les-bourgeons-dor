@@ -1,0 +1,148 @@
+/* ===== FOND DORÉ ANIMÉ ===== */
+body {
+    margin: 0;
+    font-family: 'PaperMarioFont';
+
+	src: url('fonts/PaperMarioFont.ttf') format('truetype');
+
+    color: #fff;
+    text-align: center;
+    overflow-x: hidden;
+
+    background: linear-gradient(270deg, #c9a227, #ffd700, #b8960b);
+    background-size: 600% 600%;
+    animation: goldMove 10s ease infinite;
+}
+
+@keyframes goldMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ===== CONTENEUR PRINCIPAL ===== */
+.container {
+    background: rgba(0, 0, 0, 0.65);
+    margin: 50px auto;
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 900px;
+
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    backdrop-filter: blur(8px);
+}
+
+/* ===== TITRE ===== */
+h1 {
+    font-size: 2.8em;
+    text-decoration: underline;
+    margin-bottom: 20px;
+
+    background: linear-gradient(90deg, #ffd700, #fff5b7, #ffd700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
+}
+
+/* ===== SECTIONS ===== */
+h2 {
+    margin-top: 30px;
+    font-size: 1.8em;
+}
+
+/* ===== TEXTE ===== */
+p {
+    font-size: 1.2em;
+    line-height: 1.6em;
+}
+
+/* ===== ACTIVITÉS ===== */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+
+/* ===== GALERIE PROPRE ===== */
+.gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.gallery img {
+    width: 250px;              /* TAILLE FIXE */
+    height: 170px;
+    object-fit: cover;         /* coupe propre */
+    border-radius: 12px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.7);
+}
+
+/* ===== CONTACT ===== */
+.contact {
+    background: rgba(255,255,255,0.1);
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 20px;
+}
+
+.contact a {
+    color: #ffd700;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+/* ===== BOUTONS LANGUE ===== */
+.lang-switch {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+}
+
+.lang-switch img {
+    width: 35px;
+    cursor: pointer;
+    margin: 5px;
+    transition: transform 0.2s;
+}
+
+.lang-switch img:hover {
+    transform: scale(1.2);
+}
+
+/* ===== RESPONSIVE (TÉLÉPHONE) ===== */
+@media (max-width: 600px) {
+    .container {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .gallery img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* TEXTE FR */
+.fr-text {
+    color: #4da6ff; /* bleu clair */
+}
+
+/* TEXTE EN */
+.en-text {
+    color: #003366; /* bleu foncé */
+}
